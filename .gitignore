@@ -1,11 +1,30 @@
-HELP.md
+# =========================
+# JAVA / SPRING BOOT
+# =========================
 target/
+build/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-### STS ###
-.apt_generated
+# =========================
+# ENV FILES
+# =========================
+.env
+**/.env
+
+# =========================
+# FRONTEND (React / Vite)
+# =========================
+**/node_modules/
+**/dist/
+**/.vite/
+
+# =========================
+# IDEs - STS / Eclipse
+# =========================
 .classpath
 .factorypath
 .project
@@ -13,22 +32,31 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# =========================
+# INTELLIJ IDEA
+# =========================
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# =========================
+# NETBEANS
+# =========================
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# =========================
+# VS CODE
+# =========================
 .vscode/
-notification-multichannel-backend/.env
+
+# =========================
+# LOGS / SYSTEM FILES
+# =========================
+*.log
+.DS_Store
+Thumbs.db
