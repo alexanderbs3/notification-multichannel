@@ -1,35 +1,14 @@
 spring:
-  application:
-    name: notification-multichannel
-
   datasource:
-    url: jdbc:mysql://localhost:3307/notification_multichannel?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: notification_user
-    password: notification_password
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    open-in-view: false
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-        format_sql: true
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
 
   rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-    listener:
-      simple:
-        retry:
-          enabled: true
-          initial-interval: 1000ms
-          max-attempts: 3
-          max-interval: 10000ms
-          multiplier: 2
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
 
 server:
-  port: 8080
+  port: ${SERVER_PORT}
