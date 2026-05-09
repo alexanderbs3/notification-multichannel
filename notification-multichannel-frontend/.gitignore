@@ -1,0 +1,12 @@
+# Backend (Java)
+notification-multichannel-backend/target/
+*.log
+
+# Frontend (Node)
+notification-multichannel-frontend/node_modules/
+notification-multichannel-frontend/dist/
+
+# Geral
+.vscode/
+.idea/
+.DS_Store
